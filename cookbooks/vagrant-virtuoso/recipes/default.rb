@@ -17,3 +17,7 @@ package 'Install OpenSSL dev' do
     package_name 'libssl-dev'
   end
 end
+package 'libiodbc2'
+package 'libiodbc2-dev'
+package 'openjdk-7-jdk'
+package 'python-dev'
