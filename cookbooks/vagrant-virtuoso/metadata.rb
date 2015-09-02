@@ -5,3 +5,7 @@ license 'all_rights'
 description 'Installs/Configures vagrant-virtuoso'
 long_description 'Installs/Configures vagrant-virtuoso'
 version '0.1.0'
+
+depends 'apt'
+depends 'build-essential'
+depends 'git'
