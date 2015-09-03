@@ -69,11 +69,26 @@ execute 'install-virtuoso' do
   command 'make install'
   only_if do File.exists?("#{src_dir}/binsrc/virtuoso/virtuoso-t") end
   action :nothing
+  notifies :run, 'template[/etc/init.d/virtuoso-opensource-7]', :immediately
+  notifies :run, 'template[/etc/default/virtuoso-opensource-7]', :immediately
   notifies :run, 'execute[run-virtuoso]', :delayed
 end
 
-execute 'run-virtuoso' do
-  command 'isql 1111 dba dba -K'
-  command 'virtuoso-t'
+template '/etc/init.d/virtuoso-opensource-7' do
+  source 'init.rb'
+  mode "755"
   action :nothing
+end
+
+template '/etc/default/virtuoso-opensource-7' do
+  source 'default.rb'
+  mode '644'
+  action :nothing
+end
+
+execute 'run-virtuoso' do
+  command 'update-rc.d virtuoso-opensource-7 defaults'
+  service 'virtuoso-opensource-7' do
+    action :restart
+  end
 end
