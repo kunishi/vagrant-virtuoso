@@ -1,6 +1,6 @@
 # vagrant-virtuoso
 
-大向先生が書かれた[VagrantとVirtuosoでローカル用のSPARQLエンドポイントをつくる](https://github.com/lodac/lodac/wiki/VagrantとVirtuosoでローカル用のSPARQLエンドポイントをつくる)のうち、Virtuosoの起動までをChefで自動化するCookbookです。
+[VagrantとVirtuosoでローカル用のSPARQLエンドポイントをつくる](https://github.com/lodac/lodac/wiki/VagrantとVirtuosoでローカル用のSPARQLエンドポイントをつくる)のうち、Virtuosoの起動までをChefで自動化するCookbookです。
 
 上記ドキュメントの作業に加え、VirtuosoをUbuntu Linuxのサービスとして登録しています。したがって、例えばホストOSを再起動してもVirtuosoが自動的に立ち上がります。
 
