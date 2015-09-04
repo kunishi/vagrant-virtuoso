@@ -10,6 +10,8 @@ src_dir = '/usr/local/src/virtuoso-opensource'
 include_recipe 'apt'
 include_recipe 'build-essential'
 include_recipe 'git'
+include_recipe 'python'
+include_recipe 'openjdk'
 
 package 'gperf'
 package 'libtool'
@@ -23,8 +25,6 @@ package 'Install OpenSSL dev' do
 end
 package 'libiodbc2'
 package 'libiodbc2-dev'
-package 'openjdk-7-jdk'
-package 'python-dev'
 
 git src_dir do
   repository 'git://github.com/openlink/virtuoso-opensource.git'
