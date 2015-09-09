@@ -15,7 +15,7 @@ include_recipe 'openjdk'
 
 package 'gperf'
 package 'libtool'
-package 'Install OpenSSL dev' do
+package 'libssl-dev' do
   case node[:platform]
   when 'redhat', 'centos'
     package_name 'openssl-dev'
