@@ -1,12 +1,12 @@
 #
-# Cookbook Name:: vagrant-virtuoso
+# Cookbook Name:: virtuoso-opensource-7
 # Spec:: default
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'vagrant-virtuoso::default' do
+describe 'virtuoso-opensource-7::default' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new
