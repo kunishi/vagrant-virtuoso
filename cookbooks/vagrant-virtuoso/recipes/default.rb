@@ -7,7 +7,6 @@
 configure_options = '--prefix=/usr/local --with-layout=debian'
 src_dir = '/usr/local/src/virtuoso-opensource'
 
-include_recipe 'apt'
 include_recipe 'build-essential'
 include_recipe 'git'
 include_recipe 'python'
