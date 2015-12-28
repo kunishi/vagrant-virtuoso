@@ -9,5 +9,6 @@ Vagrant.configure(2) do |config|
       "apt",
       "virtuoso-opensource-7",
     ]
+    chef.nodes_path = "nodes"
   end
 end
