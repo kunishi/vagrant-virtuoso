@@ -26,7 +26,7 @@ package 'libiodbc2'
 package 'libiodbc2-dev'
 
 git src_dir do
-  repository 'git://github.com/openlink/virtuoso-opensource.git'
+  repository 'https://github.com/openlink/virtuoso-opensource.git'
   action :sync
   notifies :run, 'execute[cleanup-virtuoso-source-dir]', :immediately
 end
